@@ -1,0 +1,57 @@
+import turtle
+import random
+
+
+def screenLeftClick(x, y):
+    turtle.pendown()
+    turtle.goto(x, y)
+
+
+
+def screenRightClick(x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+
+def screenMidClick(x,y):
+
+    turtle.penup()
+    turtle.goto(x, y)
+
+    turtle.pendown()
+    turtle.circle(50)
+
+def star(x,y):
+    turtle.penup()
+    turtle.goto(x,y)
+    turtle.pendown()
+
+    turtle.left(35)
+
+    for i in range(5):
+        turtle.forward(200)
+        turtle.left(144)
+
+    turtle.penup()
+    turtle.goto(x, y-300)
+    turtle.pendown()
+
+    for i in range(5):
+        turtle.forward(200)
+        turtle.left(144)
+
+    
+    # 거북이 속도 (0~10) 0이 제일 빠름
+turtle.speed(7)
+
+
+
+
+turtle.onscreenclick(screenLeftClick, 1)
+turtle.onscreenclick(screenMidClick, 2)
+turtle.onscreenclick(screenRightClick, 3)
+
+star(0,0)
+
+
+turtle.done()
+
