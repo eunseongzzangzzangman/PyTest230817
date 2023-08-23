@@ -116,7 +116,7 @@ while True:
             # break
             tag_list = bsObject.findAll('tr')
             # print(tag_list)
-            # print('###### 실시간 뉴스 속보 #######')
+           
             for tag in tag_list:
                 if count == 1:
                     count += 1
